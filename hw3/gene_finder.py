@@ -25,13 +25,79 @@ def coding_strand_to_AA(dna):
         returns: a string containing the sequence of amino acids encoded by the
                  the input DNA fragment
     """
-    
     # YOUR IMPLEMENTATION HERE
+    cdn = [None]*int(len(dna)/3)
+    aminoAcids = list([None]*int(len(dna)/3))
+    for i in range(len(dna)/3):
+    	cdn[i] = dna[i:i+3]
+    	if cdn[i] == 'ATT' or cdn[i] == 'ATC' or cdn[i] == 'ATA':
+    		aminoAcids[i] = 'I'
+    	elif dna[i:i+2] == 'CT' or cdn[i] == 'TTA' or cdn[i] == 'TTG':
+    		aminoAcids[i] = 'L'
+    	elif dna[i:i+2] == 'GT':
+    		aminoAcids[i]  = 'V'
+    	elif dna[i:i+2] == 'TT':
+    		aminoAcids[i] = 'F'
+    	elif cdn[i] == 'ATG':
+    		aminoAcids[i] = 'M'
+    	elif cdn[i] == 'TGT' or cdn[i] == 'TGC':
+    		aminoAcids[i] = 'C'
+    	elif dna[i:i+2] == 'GC':
+    		aminoAcids[i] = 'A'
+    	elif dna[i:i+2] == 'GG':
+    		aminoAcids[i] = 'G'
+    	elif dna[i:i+2] == 'CC':
+    		aminoAcids[i] = 'P'
+    	elif dna[i:i+2] == 'AC':
+    		aminoAcids[i] = 'T'
+    	elif dna[i:i+2] == 'TC' or cdn[i] == 'AGT' or cdn[i] == 'AGC':
+    		aminoAcids[i] = 'S'
+    	elif dna[i:i+2] == 'TA':
+    		aminoAcids[i] = 'Y'
+    	elif cdn[i] == 'TGG':
+    		aminoAcids[i] = 'W'
+    	elif cdn[i] == 'CAA' or cdn[i] == 'CAG':
+    		aminoAcids[i] = 'Q'
+    	elif cdn[i] == 'AAT' or cdn[i] == 'AAC':
+    		aminoAcids[i] = 'N'
+    	elif dna[i:i+2] == 'CA':
+    		aminoAcids[i] = 'H'
+    	elif cdn[i] == 'GAA' or cdn[i] == 'GAG':
+    		aminoAcids[i] = 'E'
+    	elif cdn[i] == 'GAT' or cdn[i] == 'GAC':
+    		aminoAcids[i] = 'D'
+    	elif dna[i:i+2] == 'AA':
+    		aminoAcids[i] = 'K'
+    	else:
+    		aminoAcids[i] = 'R'
+    return ''.join(aminoAcids)
 
 def coding_strand_to_AA_unit_tests():
     """ Unit tests for the coding_strand_to_AA function """
         
     # YOUR IMPLEMENTATION HERE
+    dnacheck1 = "AAAAAAGAAAAGGACTCCTGTATG"
+    out_hyp1 = "KKEKDSCM"
+    out_act1 = coding_strand_to_AA(dnacheck1)
+    print "input: " + dnacheck1 +", " +"expected output: "
+    print out_hyp1 + ", actual output: "
+    print out_act1
+    
+    dnacheck2 = "CAAATTCGT"
+    out_hyp2 = "QIR"
+    out_act2 = coding_strand_to_AA(dnacheck2)
+    print "input: " + dnacheck2 +", " +"expected output: "
+    print out_hyp2 + ", actual output: "
+    print out_act2
+    
+    dnacheck3 = "CTTGTTCCTTAT"
+    out_hyp3 = "LVPY"
+    out_act3 = coding_strand_to_AA(dnacheck3)
+    print "input: " + dnacheck3 +", " +"expected output: "
+    print out_hyp3 + ", actual output: "
+    print out_act3
+    
+    
 
 def get_complement(dna):
     """ Computes the complementary sequence of DNA for the specfied DNA sequence
@@ -41,11 +107,24 @@ def get_complement(dna):
     """
     
     # YOUR IMPLEMENTATION HERE
+    rvs_dna = dna[::-1]
+
+    rep = {'A':'T','T':'A','G':'C','C':'G'}
+    rep_dict = dict(rep)
+    repfun = lambda match: rep_dict[match.group(0)]
+    pattern = rvs_dna.compile("|".join([rvs_dna.escape(i) for i, j in rep]), rvs_dna.M)
+    rvs_cmpl = lambda string: pattern.sub(repfun, string)
     
+    
+    
+    
+    for i,j in dic.iteritems():
+        rvs_cmpl = rvs_dna.replace(i,j)
 def get_complement_unit_tests():
     """ Unit tests for the get_complement function """
         
-    # YOUR IMPLEMENTATION HERE    
+    # YOUR IMPLEMENTATION HERE
+    
 
 def rest_of_ORF(dna):
     """ Takes a DNA sequence that is assumed to begin with a start codon and returns
