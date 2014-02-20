@@ -109,7 +109,7 @@ def remap_interval(val, input_interval_start, input_interval_end, output_interva
         to the output interval [output_interval_start, output_interval_end].  The mapping
         is an affine one (i.e. output = input*c + b).
     
-        TODO: please fill out the rest of this docstring
+        Use cross multiplication, comparing the ratios of value - the input interval start to the input range to output value - output interval start to the output range.
         (val-input_interval_start)/(input_interval_start - input_interval_end) = x/(output_interval_start - output_interval_end)
     """
     # your code goes here
