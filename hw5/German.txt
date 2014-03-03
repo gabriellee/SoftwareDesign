@@ -1,4 +1,6 @@
-﻿abbiegen                                     turn
+﻿
+
+abbiegen                                     turn
 
 Abend                                        evening
 
@@ -173,16 +175,6 @@ Alkohol                                      alcohol
 alkoholfreie Getränke                        soft drinks
 
 all                                          all
-
-alle Leute                                   all men
-
-alle Menschen sind gleichwertig              all men are equal
-
-alle paar Stunden                            every few hours
-
-alle Völker der  Welt                        all the peoples of the world
-
-alle Völker der Erde                         all the peoples of the earth
 
 Allee                                        avenue
 
@@ -3521,10 +3513,6 @@ extensiv                                     extensive
 
 Extrem                                       extreem
 
-
-F
-
-
 Fabrik                                       factory
 
 Fabrik                                       works
@@ -4174,10 +4162,6 @@ füttern                                      feed (irr.)
 fütterte                                     fed
 
 Fütterung                                    feed
-
-
-G
-
 
 gab                                          gave
 
@@ -5169,10 +5153,6 @@ Gutes tun                                    do good
 
 gymnastische Übungen                         gymnastic exercises
 
-
-H
-
-
 Haar                                         hair
 
 Haarbürste                                   hair-brush
@@ -5689,10 +5669,6 @@ Hut                                          hat
 
 Hütte                                        cottage
 
-
-I
-
-
 ich                                          I
 
 ich auch                                     so do I
@@ -6063,10 +6039,6 @@ Italiener                                    Italian
 
 italienisch                                  Italian
 
-
-J
-
-
 ja                                           yes
 
 Jackett                                      jacket
@@ -6168,10 +6140,6 @@ Juni                                         June
 Jurist                                       lawyer
 
 Juwel                                        jewel
-
-
-K
-
 
 Kabel                                        cable
 
@@ -6739,10 +6707,6 @@ Küste                                        shore
 
 Küstenlinie                                  coast-line
 
-
-L
-
-
 lächeln                                      smile
 
 Lächeln                                      smile
@@ -7104,10 +7068,6 @@ Lüge                                         lie
 lügen                                        lie
 
 lustig                                       gay (happy)
-
-
-M
-
 
 machen                                       do (irr.)
 
@@ -7640,10 +7600,6 @@ Muttersprachler                              native speaker
 
 Mütze                                        cap
 
-
-N
-
-
 nach (einem Ort)                             for
 
 nach (Richtung)                              to
@@ -7960,10 +7916,6 @@ Nützlichkeit                                 usefulness
 
 nutzlos                                      useless
 
-
-O
-
-
 ob                                           if
 
 ob                                           whether
@@ -8090,10 +8042,6 @@ Ostern                                       Easter
 östlich                                      eastern
 
 Ozean                                        ocean
-
-
-P
-
 
 Paar Schuhe                                  pair of shoes
 
@@ -8433,10 +8381,6 @@ Puppe                                        doll
 
 putze deine Zähne                            clean your teeth
 
-
-Q
-
-
 Quadrat                                      square
 
 Quadratmeile                                 a square mile
@@ -8452,10 +8396,6 @@ Quelle                                       spring
 Querstraße                                   turning
 
 Quittung                                     receipt
-
-
-R
-
 
 Rache                                        revenge
 
@@ -8853,10 +8793,6 @@ russisch                                     Russian
 Rüstung eines Ritters                        armour
 
 Rute                                         rod
-
-
-S
-
 
 Saal                                         hall
 
@@ -10389,10 +10325,6 @@ süßen                                        sweeten
 Süßigkeiten                                  sweets
 
 Szene                                        scene
-
-
-T
-
 
 Tabak                                        tobacco
 
