@@ -2,7 +2,7 @@
 """
 Created on Sat Mar  1 17:53:00 2014
 
-@author: gabrielle
+@author: gabrielle and maor
 """
 import re
 import pickle
@@ -11,6 +11,9 @@ german = g.read()
 g.close()
 f = open('LengthbySize.pickle','w')
 def parse_word_pairs(book):
+    """book is the bilingual dictionary.  It is of type string
+    output: pairs is a list of tuples. The left is a list of german words and the right is a list of english words that correspond to each other
+    this function removes extraneous characters from the input and arranges the word pairs using re.split to separate lines and words"""
     word_list = re.split('\r\n\r\n',book)
     word_list.remove('\xef\xbb\xbf')
     pairs = []
@@ -20,6 +23,10 @@ def parse_word_pairs(book):
     return pairs
 
 def levenshtein_fun(s1, s2):
+    """input: s1 and s2 are the two strings between which edit distance is measured
+    ouput: a floating point which is the edit distance divided by the length of the longest word
+    this function computes the edit distance between two strings normalized to word length"""
+    output
     num_subst = 0
     num_ins = 0
     num_del = 0
@@ -51,10 +58,11 @@ def levenshtein_fun(s1, s2):
     return weighted_dist
 
 def get_lingual_distance(book):
-    #book is a translation dictionary
-    #word_pair_list contains a list of lists for each word defined in the dictionary
-    #the output is a long string that contains the levenshtein distance, two spaces, and then the length of the string
-    #This is then put in matlab and plotted
+    """this is the wrapper function which first calls parse_word_pairs and then calls levenshtein_fun for each word pair in the dictionary
+    input: book is a string.  It is the translational dictionary
+    output: a long string that contains the levenshtein distance, two spaces, and then the length of the string.  This is then put in matlab and plotted
+    word_pair_list contains a list of lists for each word defined in the dictionary
+    """
     word_pair_list = parse_word_pairs(book)
     distances = list()
     num_subst = 0
