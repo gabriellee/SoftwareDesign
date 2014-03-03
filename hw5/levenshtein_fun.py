@@ -2,38 +2,41 @@
 """
 Created on Sat Mar  1 17:53:00 2014
 
-@author: gabrielle
+@author: gabrielle and maor
 """
-def get_lingual_distance(book):
-    #book is a translation dictionary
-    #word_pair_list contains a list of lists for each word defined in the dictionary
-    word_pair_list = parse_word_pairs(book)
-    distances = list()
-    num_subst = 0
-    num_ins = 0
-    num_del = 0
-    for i in range(len(word_pair_list)):
-        for j in range(len(word_pair_list[i])):
-            output = levenshtein_fun(word_pair_list[i][0],word_pair_list[i][j])
-            distances.append(output[0])
-            num_subst += output[1]
-            num_ins += output[2]
-            num_del += output[3]
-    avg_dist = 
-    return 
-            
-def parse_word_pairs():
+import re
+import pickle
+import numpy
+import matplotlib.pyplot as plt
+g = open('German.txt','r')
+german = g.read()
+g.close()
+f = open('LengthbySize.pickle','w')
+def parse_word_pairs(book):
+    """book is the bilingual dictionary.  It is of type string
+    output: pairs is a list of tuples. The left is a list of german words and the right is a list of english words that correspond to each other
+    this function removes extraneous characters from the input and arranges the word pairs using re.split to separate lines and words"""
+    word_list = re.split('\r\n\r\n',book)
+    word_list.remove('\xef\xbb\xbf')
+    pairs = []
+    for i in range(len(word_list)):
+        s = re.split('  +',word_list[i])
+        pairs.append((s[0].split(),s[1].split()))
+    return pairs
+
 def levenshtein_fun(s1, s2):
+    """input: s1 and s2 are the two strings between which edit distance is measured
+    ouput: a floating point which is the edit distance divided by the length of the longest word
+    this function computes the edit distance between two strings normalized to word length"""
+    output
     num_subst = 0
     num_ins = 0
     num_del = 0
     #s2 must be the shorter string
     if len(s1) < len(s2):
-        temp = s1;
-        s1 = s2;
-        s2 = temp;
+        return levenshtein_fun(s2, s1)
     if len(s2) == 0:
-        return len(s1)
+        return len(s1), 0, len(s1), 0
     #the inital row is a comparison between the first character of s1 and each character of s2
     prior_row = range(len(s2)+1)
     #loop through each character in s1(the shorter string) and compare it to consecutive characters in s2
@@ -48,17 +51,55 @@ def levenshtein_fun(s1, s2):
             #transforming a string by insertion has an edit distance of 1
             insertions = prior_row[j + 1] + 1
             #add 1 to the edit distance between the prior c2 and the same c1
-            deletions = current_row[j] +1
+            deletions = current_row[j] + 1
             #add one to the edit distance between the prior c2 and the prior c1
-            substitutions = prior_row[j] + 1
+            substitutions = prior_row[j] + (c1 != c2)
             current_row.append(min(insertions, deletions, substitutions))
-            if min(insertions, deletions, substitutions) == substitutions:
-                num_subst+=1
-            elif min(insertions, deletions, substitutions) == insertions:
-                num_ins+=1
-            else:
-                num_del+=1
         prior_row = current_row
-    return prior_row, num_subst, num_ins, num_del
+        weighted_dist = float(prior_row[-1])/float(len(s1))
+    return weighted_dist
+
+def listtostr(s):
+    string = ""
+    for i in range(len(s)):
+        for j in range(len(s[i])):
+            string = string + str(s[i][j]) + '  '
+        string = string + 'FUCK'
+    return string 
+
+def get_lingual_distance(book):
+    """this is the wrapper function which first calls parse_word_pairs and then calls levenshtein_fun for each word pair in the dictionary
+    input: book is a string.  It is the translational dictionary
+    output: a long string that contains the levenshtein distance, two spaces, and then the length of the string.  This is then put in matlab and plotted
+    word_pair_list contains a list of lists for each word defined in the dictionary
+    """
+    word_pair_list = parse_word_pairs(book)
+    distances = list()
+    num_subst = 0
+    num_ins = 0
+    num_del = 0
+    distance = []
+    length = []
+    for i in range(len(word_pair_list)):
+        dist =  []
+        leg = []
+        german = word_pair_list[i][0]
+        english = word_pair_list[i][1]
+        for j in range(len(german)):
+            for k in range(len(english)):
+                dist.append(levenshtein_fun(german[j],english[k]))
+                leg.append(max([len(german[j]) , len(english[k])]))
+        distance.append(min(dist))
+        length.append(min(leg))
+    y = numpy.array(distance)
+    x = numpy.array(length)
+    plt.plot(x,y,'.')
+    plt.xlabel('Length of Words')
+    plt.ylabel('Levenshtein Distance/Word Length')
+    plt.show()
+get_lingual_distance(german)
+
+
+
+
             
-        
