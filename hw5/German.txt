@@ -1,7 +1,4 @@
-﻿A
-
-
-abbiegen                                     turn
+﻿abbiegen                                     turn
 
 Abend                                        evening
 
@@ -929,10 +926,6 @@ auswendig                                    by heart
 
 ausziehen (Kleid)                            take off
 
-
-B
-
-
 Baby                                         baby
 
 Bach                                         brook
@@ -1827,10 +1820,6 @@ Butter                                       butter
 
 Butter aufstreichen                          spread butter
 
-
-C
-
-
 Cafe                                         cafe
 
 Camping                                      camping
@@ -1870,10 +1859,6 @@ Couch                                        couch
 Cousine                                      cousin
 
 Creme                                        cream
-
-
-D
-
 
 D-Zug                                        express train
 
@@ -2368,10 +2353,6 @@ Dusche                                       shower
 Düsenflugzeug                                jet plane
 
 Dutzend                                      dozen
-
-
-E
-
 
 Ebbe                                         low tide
 
@@ -10801,10 +10782,6 @@ tut                                          do
 
 Typ                                          type
 
-
-U
-
-
 U-Bahn                                       underground
 
 U-Bahn (London)                              tube
@@ -11276,10 +11253,6 @@ Urteil                                       judgment
 Urteil des Gerichts                          sentence
 
 urteilen                                     judge
-
-
-V
-
 
 Vater                                        father
 
@@ -11991,10 +11964,6 @@ vorwärts                                     forwards
 
 vorziehen                                    prefer
 
-
-W
-
-
 Waage                                        scales
 
 wach                                         awake
@@ -12645,17 +12614,7 @@ wusste                                       knew
 
 wütend                                       mad
 
-
-X
-
-
-Y
-
-
 Yard (Maß)                                   yard
-
-Z
-
 
 zäh                                          tough
 

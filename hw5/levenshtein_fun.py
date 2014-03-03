@@ -4,6 +4,19 @@ Created on Sat Mar  1 17:53:00 2014
 
 @author: gabrielle
 """
+import re
+esp = open('Esperanto.txt','r')
+esp = esp.read()
+w = open('Welsh.txt', 'r')
+w = w.read()
+g = open('German.txt','r')
+g = g.read()
+oe = open('OldEnglish.txt','r')
+oe = oe.read()
+esptag = open('EnEspTag.txt','r')
+esptag = esptag.read()
+
+
 def get_lingual_distance(book):
     #book is a translation dictionary
     #word_pair_list contains a list of lists for each word defined in the dictionary
@@ -19,21 +32,29 @@ def get_lingual_distance(book):
             num_subst += output[1]
             num_ins += output[2]
             num_del += output[3]
-    avg_dist = 
-    return 
+    return output
             
-def parse_word_pairs():
+def parse_word_pairs(book):
+    if book==esp:
+        word_list = re.split('\n',esp)
+        for i in range(len(word_list)):
+            line = re.split(' = ',word_list[i])
+            word_list[i] = []
+            word_list[i].append(line[0].split()[0].strip(','))
+            word_list[i].extend(line[1].split()) 
+        return word_list
+        
+print parse_word_pairs(esp)[0]
+
 def levenshtein_fun(s1, s2):
     num_subst = 0
     num_ins = 0
     num_del = 0
     #s2 must be the shorter string
     if len(s1) < len(s2):
-        temp = s1;
-        s1 = s2;
-        s2 = temp;
+        return levenshtein_fun(s2, s1)
     if len(s2) == 0:
-        return len(s1)
+        return len(s1), 0, len(s1), 0
     #the inital row is a comparison between the first character of s1 and each character of s2
     prior_row = range(len(s2)+1)
     #loop through each character in s1(the shorter string) and compare it to consecutive characters in s2
