@@ -1,5 +1,4 @@
-﻿A
-
+﻿
 
 abbiegen                                     turn
 
@@ -176,16 +175,6 @@ Alkohol                                      alcohol
 alkoholfreie Getränke                        soft drinks
 
 all                                          all
-
-alle Leute                                   all men
-
-alle Menschen sind gleichwertig              all men are equal
-
-alle paar Stunden                            every few hours
-
-alle Völker der  Welt                        all the peoples of the world
-
-alle Völker der Erde                         all the peoples of the earth
 
 Allee                                        avenue
 
@@ -928,10 +917,6 @@ ausweiten                                    widen
 auswendig                                    by heart
 
 ausziehen (Kleid)                            take off
-
-
-B
-
 
 Baby                                         baby
 
@@ -1827,10 +1812,6 @@ Butter                                       butter
 
 Butter aufstreichen                          spread butter
 
-
-C
-
-
 Cafe                                         cafe
 
 Camping                                      camping
@@ -1870,10 +1851,6 @@ Couch                                        couch
 Cousine                                      cousin
 
 Creme                                        cream
-
-
-D
-
 
 D-Zug                                        express train
 
@@ -2368,10 +2345,6 @@ Dusche                                       shower
 Düsenflugzeug                                jet plane
 
 Dutzend                                      dozen
-
-
-E
-
 
 Ebbe                                         low tide
 
@@ -3540,10 +3513,6 @@ extensiv                                     extensive
 
 Extrem                                       extreem
 
-
-F
-
-
 Fabrik                                       factory
 
 Fabrik                                       works
@@ -4193,10 +4162,6 @@ füttern                                      feed (irr.)
 fütterte                                     fed
 
 Fütterung                                    feed
-
-
-G
-
 
 gab                                          gave
 
@@ -5188,10 +5153,6 @@ Gutes tun                                    do good
 
 gymnastische Übungen                         gymnastic exercises
 
-
-H
-
-
 Haar                                         hair
 
 Haarbürste                                   hair-brush
@@ -5708,10 +5669,6 @@ Hut                                          hat
 
 Hütte                                        cottage
 
-
-I
-
-
 ich                                          I
 
 ich auch                                     so do I
@@ -6082,10 +6039,6 @@ Italiener                                    Italian
 
 italienisch                                  Italian
 
-
-J
-
-
 ja                                           yes
 
 Jackett                                      jacket
@@ -6187,10 +6140,6 @@ Juni                                         June
 Jurist                                       lawyer
 
 Juwel                                        jewel
-
-
-K
-
 
 Kabel                                        cable
 
@@ -6758,10 +6707,6 @@ Küste                                        shore
 
 Küstenlinie                                  coast-line
 
-
-L
-
-
 lächeln                                      smile
 
 Lächeln                                      smile
@@ -7123,10 +7068,6 @@ Lüge                                         lie
 lügen                                        lie
 
 lustig                                       gay (happy)
-
-
-M
-
 
 machen                                       do (irr.)
 
@@ -7659,10 +7600,6 @@ Muttersprachler                              native speaker
 
 Mütze                                        cap
 
-
-N
-
-
 nach (einem Ort)                             for
 
 nach (Richtung)                              to
@@ -7979,10 +7916,6 @@ Nützlichkeit                                 usefulness
 
 nutzlos                                      useless
 
-
-O
-
-
 ob                                           if
 
 ob                                           whether
@@ -8109,10 +8042,6 @@ Ostern                                       Easter
 östlich                                      eastern
 
 Ozean                                        ocean
-
-
-P
-
 
 Paar Schuhe                                  pair of shoes
 
@@ -8452,10 +8381,6 @@ Puppe                                        doll
 
 putze deine Zähne                            clean your teeth
 
-
-Q
-
-
 Quadrat                                      square
 
 Quadratmeile                                 a square mile
@@ -8471,10 +8396,6 @@ Quelle                                       spring
 Querstraße                                   turning
 
 Quittung                                     receipt
-
-
-R
-
 
 Rache                                        revenge
 
@@ -8872,10 +8793,6 @@ russisch                                     Russian
 Rüstung eines Ritters                        armour
 
 Rute                                         rod
-
-
-S
-
 
 Saal                                         hall
 
@@ -10409,10 +10326,6 @@ Süßigkeiten                                  sweets
 
 Szene                                        scene
 
-
-T
-
-
 Tabak                                        tobacco
 
 Tabakpfeife                                  pipe
@@ -10800,10 +10713,6 @@ tust                                         do
 tut                                          do
 
 Typ                                          type
-
-
-U
-
 
 U-Bahn                                       underground
 
@@ -11276,10 +11185,6 @@ Urteil                                       judgment
 Urteil des Gerichts                          sentence
 
 urteilen                                     judge
-
-
-V
-
 
 Vater                                        father
 
@@ -11991,10 +11896,6 @@ vorwärts                                     forwards
 
 vorziehen                                    prefer
 
-
-W
-
-
 Waage                                        scales
 
 wach                                         awake
@@ -12645,17 +12546,7 @@ wusste                                       knew
 
 wütend                                       mad
 
-
-X
-
-
-Y
-
-
 Yard (Maß)                                   yard
-
-Z
-
 
 zäh                                          tough
 

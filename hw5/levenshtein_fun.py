@@ -8,6 +8,7 @@ import re
 import pickle
 import numpy
 import matplotlib.pyplot as plt
+
 g = open('German.txt','r')
 german = g.read()
 g.close()
@@ -98,6 +99,7 @@ def get_lingual_distance(book):
     plt.ylabel('Levenshtein Distance/Word Length')
     plt.show()
 get_lingual_distance(german)
+
 
 
 
